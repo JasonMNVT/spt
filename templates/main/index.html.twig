@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Solidarité pour tous
+{% endblock %}
+
+{% block body %}
+	{% block menu %}
+		{% include "component/navbar.html.twig" %}
+	{% endblock %}
+	<section class="firstContainer"></section>
+	<section class="secondContainer">
+		<div class="secondContainerImage">
+			<img src="https://img.freepik.com/vecteurs-libre/logo-charite-main_23-2147503001.jpg?w=740&t=st=1680956905~exp=1680957505~hmac=c3b64a5764dac2ad31ff4c3bafbbaafc74548575d986b32e03a1f0517041080b" alt="image au hasard">
+		</div>
+		<div class="secondContainerText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+	</section>
+	<section class="thirdContainer">
+		<h2>Actualités</h2>
+	</section>
+	<section class="fourthContainer">
+		<div class="fourthContainerImage">
+			<img src="{{asset('build/images/affiche_dons.png')}}" alt="affiche dons" class="afficheDons">
+		</div>
+	</section>
+{% endblock %}

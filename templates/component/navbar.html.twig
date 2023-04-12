@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Solidarité pour tous
+{% endblock %}
+
+{% block body %}
+	<nav>
+		<div class="logo">
+			<span>
+				<a href="{{path('home')}}"><img src="{{asset('build/images/logo.svg')}}" alt="image logo"/></a>
+			</span>
+		</div>
+		<div class="nav-buttons">
+			<a href="{{path('home')}}">Accueil</a>
+			<a href="{{path('qsn')}}">Qui sommes-nous ?</a>
+			<a href="{{path('nos_actions')}}">Nos actions</a>
+			<a href="{{path('contact')}}">Contact</a>
+		</div>
+	</nav>
+
+	<script type="text/javascript">
+		let prevScrollPos = window.pageYOffset;
+window.onscroll = function () {
+let currentScrollPos = window.pageYOffset;
+if (prevScrollPos > currentScrollPos) {
+document.querySelector("nav").style.top = "0";
+} else {
+document.querySelector("nav").style.top = "-100px";
+} prevScrollPos = currentScrollPos;
+document.querySelector("nav").style.transition = "top 0.5s ease-in-out";
+}
+	</script>
+{% endblock %}
